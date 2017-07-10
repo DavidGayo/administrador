@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	{% for flashMessage in app.session.flashbag.get('mensaje') %}
+		<spam class="alerta-correcto">{{ flashMessage }}</spam>
+	{% endfor %}
+
+	<div class='cpx-content-main cpx-credential-main'>
+		<div id='cpx-title' class='cpx-content-title cpx-credential-title'>
+			<center>
+				<h2><label>
+					Matricula
+				</label>
+				{{usuario}}</h2>
+				<br /><br />
+				<table border="1">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Dispositivos</th>
+							<th>Eliminar</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% set i = 1 %}
+						{% for administrativo in administrativos %}
+							<tr>
+								<td>{{i}}</td>
+								<td>{{administrativo.mac}}</td>
+								<td align="center"><a href="{{ path('eliminar', {'id' :administrativo.id}) }}?{{url}}" style="color: red;"><b>X</b></a></td>
+							</tr>
+							{% set i = i +1 %}
+						{% endfor %}
+					</tbody>
+				</table>
+				<br />
+
+				{% if dispositivos <= 3 %}
+					<script type="text/javascript">
+						function get_param(name)
+						{
+						    if (location.href.indexOf("?") >= 0) 
+						    { 
+						        var query=location.href.split("?")[1];
+						        var params=query.split("&");
+						        for (var i = 0; i < params.length; i ++) {
+						             value_pair=params[i].split("=");
+						            if (value_pair[0] == name)
+						                 return unescape(value_pair[1]);
+						        }
+						    }
+						    return "";
+						}
+						function get_sip() {
+						    var sip = get_param("sip");
+						   //var sip = "172.21.144.65";
+
+
+						    if (sip.indexOf(":") < 0) { // IPv4 address
+						        return sip;
+						    } else {                    // IPv6 address
+						        return '[' + sip + ']';
+						    }
+						}
+						document.write('<form method=POST action="http://' + get_sip() + ':9997/SubscriberPortal/hotspotlogin">');
+						document.write('<input type="hidden" name="url" value="'+get_param("url")+'" />');
+						document.write('<input type="hidden" name="proxy" value="'+get_param("proxy")+'" />');
+						document.write('<input type="hidden" name="uip" value="'+get_param("uip")+'" />');
+						document.write('<input type="hidden" name="client_mac" value="'+get_param("client_mac")+'" />');
+
+					</script>
+
+
+					<input type="hidden" id='username' name='username' value="{{usuario}}">
+					<input type="hidden" id='password' name='password' value="{{contrasena}}">
+
+					<div id='continue-div' class='cpx-continue cpx-credential-continue'>
+					    <button id="continue-button" type="submit">Continuar ></button>
+					</div>
+
+					</form>
+				{% endif %}
+			</center>
+		</div>
+	</div>
+	<br />
+	
+
+{% endblock %}

@@ -1,0 +1,389 @@
+body { text-align: center; background-color: #FFFFFF; font-family: Arial,Helvetica,sans-serif; }
+textarea { font-family: Arial,Helvetica,sans-serif; }
+input { font-family: Arial,Helvetica,sans-serif; }
+
+.cpx-content-main { padding-top: 15px; padding-bottom: 10px; padding-left: 10px; padding-right: 10px; text-align: left; border-left: 1px solid #CCCCCC; border-right: 1px solid #CCCCCC; }
+.cpx-content-title { font-size: 15px; text-align: left; padding-left: 20px; color: black; }
+.cpx-content-messageHtml { padding-top: 10px; padding-bottom: 20px; color: #666666; font-size: 11px; margin-left: 40px; text-align: left; line-height: 16px; }
+.cpx-content-bottomTitle { font-size: 13px; margin-left: 20px; text-align: left; }
+.cpx-content-line { border-top: 2px solid #0B0B0A; margin-top: 10px; margin-bottom: 20px; }
+.cpx-content-buttonBar { margin-bottom: 10px; }
+
+.cpx-wizard-messageHtml            { min-height: 95px; }
+.cpx-message-messageHtml           { min-height: 105px; }
+
+.cpx-template-workarea             { margin-top: 20px; text-align: center; min-width: 440px; max-width: 800px; margin-left: auto; margin-right: auto; }
+.cpx-template-startover            { float: left; color: #999999; text-align: left; font: 9px Verdana, arial, sans-serif; margin-left: 20px; }
+.cpx-template-startover a          { color: #000300; font-size: 11px; text-decoration: underline; }
+.cpx-template-tagline a            { color: #020802; text-decoration: none; font-size: 11px; }
+.cpx-template-tagline              { color: #020802; text-align: right; font-size: 11px; ; margin-right: 40px; }
+.cpx-template-mainbox              { background-color: white; margin-top: 5px; min-width: 440px; min-height: 300px; border-radius: 20px; border-bottom: 3px solid #AAAAAA; }
+.cpx-template-topbar               { position: relative; height: 119px; }
+.cpx-template-topbar-image         { margin-top: 15px; float: left; padding-right: 40px; padding-left: 20px; height: 120px; }
+.cpx-template-topbar-image-img     { width: 231px; height: 116px; }
+.cpx-template-topbar-caption       { float: left; margin-top: 15px; height: 120px; color: #273043; font-family: Verdana, Arial, sans-serif; }
+.cpx-template-topbar-caption-line1 { padding-top: 25px; font-size: 19px; padding-bottom: 7px; }
+.cpx-template-topbar-caption-line2 { font-size: 25px;  }
+.cpx-template-line                 { border-top: 2px solid #0B0B0A; margin-left: 20px; margin-right: 20px; }
+.cpx-template-footer               { float: left; text-align:left; margin-left:20px; font: 9px Verdana,arial,sans-serif; color: #999999; margin-top:5px}
+.cpx-template-footer-right         { text-align:right; margin-right:20px; font: 9px Verdana,arial,sans-serif; color: #999999; margin-top:5px}
+
+/** These are defaults and can be overridden/appendedTo within the template as needed. */
+.cpx-continue { float: right; padding-left: 30px; padding-right: 30px; margin-top: 3px;}
+.cpx-continue a { min-width: 50px; text-align: center; display:block; line-height: 18px; border: 1px solid black; color: #FFFFFF; background-color: #006400; cursor: pointer; font: 10px Arial, sans-serif; padding: 0px 10px; text-decoration: none; }
+.cpx-continue-disabled a {background-color: white; border: 1px solid gray; color: gray; cursor: pointer; font-weight: bold; font-size: 10px; padding: 0px 10px; text-decoration: none; }
+.cpx-continue button { min-width: 50px; text-align: center; display:block; line-height: 18px; border: 1px solid black; color: #FFFFFF; background-color: #006400; cursor: pointer; font: 10px Arial, sans-serif; padding: 0px 10px; text-decoration: none; }
+.cpx-continue-disabled button {background-color: white; border: 1px solid gray; color: gray; cursor: pointer; font-weight: bold; font-size: 10px; padding: 0px 10px; text-decoration: none; }
+#continue-button { line-height: 18px; }
+#continue-button-send { line-height: 18px; }
+#continue-button-submit { line-height: 18px; }
+.cpx-hidden { display: none; }
+
+.cpx-back { float: left; padding-right: 30px; padding-left: 30px; margin-top: 3px;}
+.cpx-back a { min-width: 50px; text-align: center; display:block; line-height: 18px; border: 1px solid black; color: #FFFFFF; background-color: #006400; cursor: pointer; font: 10px Arial, sans-serif; padding: 0px 10px; text-decoration: none; }
+.cpx-back-disabled a {background-color: white; border: 1px solid gray; color: gray; cursor: pointer; font-weight: bold; font-size: 10px; height: 20px; padding: 3px 10px; text-decoration: none; }
+#back-button { line-height: 18px; }
+
+.cpx-helplink { margin-top: 20px; text-align: left; padding-left: 20px; font-size: 12px; }
+/* .cpx-credential-helplink { float: left; margin-left: 40px; font-size: 12px;  } */
+.cpx-helplink a { color: #0000EE; }
+.cpx-helplink a:visited { color: #0000EE; }
+.cpx-helplink a:hover { color: #0000EE; }
+
+
+.cpx-eula { text-align: right;  float: left; margin-left: 20px; }
+.cpx-eulaBox { float: right; }
+.cpx-eulaBox-highlighted { }
+.cpx-eulaBox-checkbox { float: right; }
+.cpx-aup-eulaBox-label { font-size: 11px; float: right; padding-left: 5px; padding-top: 2px; float:right;  }
+.cpx-aup-eulaBox-checkbox { float: right; padding-right: 10px; }
+.cpx-aup-icon { float:left; margin-left: 20px; padding-top: 10px; }
+.cpx-aup-messageHtml { margin-left: 70px; margin-right: 40px; min-height: 60px; }
+.cpx-aup-aupText { text-align: left; font-size:9px; font-weight: normal; margin: 20px; line-height: 15px; }
+
+.cpx-content-bottomNote { padding-left: 10px; font-size: 11px; color: #666666; padding-bottom: 10px; }
+.cpx-error       { color: red; margin-top: 10px; }
+
+.cpx-selectionPrompt-title {padding-left: 0px;}
+.cpx-selectionPrompt-main { text-align: center; }
+.cpx-selectionPrompt-inner { border: 0px solid blue; text-align:center; max-width: 460px; margin:auto; padding-bottom:10px;}
+.cpx-selectionPrompt-messageHtml { margin-left: 20px; height:15px; }
+
+.cpx-selectionPrompt-item { border: 0px solid white; padding-bottom: 5px; padding-top: 5px; margin-left:0px;}
+.cpx-selectionPrompt-item-icon { padding-top:10px; float: left; width: 200px; text-align: center; }
+.cpx-selectionPrompt-item-icon img { border: 0px; }
+.cpx-selectionPrompt-item-text { border: 0px solid red; margin-left: 200px; padding-right: 5px;}
+.cpx-selectionPrompt-item-textTitle { text-align: left; line-height: 30px; border-bottom: 0px solid #CCCCCC; margin-bottom: 4px; }
+.cpx-selectionPrompt-item-textTitle a { font-size: 17px; font-weight: normal; color: black; text-decoration: underline; cursor: pointer; }
+.cpx-selectionPrompt-item-textDescription { text-align: left; line-height: 18px; }
+.cpx-selectionPrompt-item-textDescription a { font-size: 13px; color: black; text-decoration: none; }
+.cpx-selectionPrompt-item-textDescriptionFont {font-size: 11px; color: #222222;}
+.cpx-selectionPrompt-item-textTitleFont { font-size: 15px; font-weight: bold; color: #222222; }
+
+.cpx-selectionPrompt-item-text-noIcon { margin-left: 20px; }
+.cpx-selectionPrompt-item-icon-noIcon { display: none; }
+
+.cpx-selectionPrompt-buttons {padding: 0px 0 0 0;margin: 0; max-width: 460px; }
+.cpx-selectionPrompt-buttons li{list-style: none;padding: 0 0 5px 0;margin: 0; }
+.cpx-selectionPrompt-button a{background-color: white; min-width: 420px; min-height: 80px; display: block; border: 1px solid #C0C0C0; border-radius: 10px; text-decoration: none; }
+.cpx-selectionPrompt-button a:hover{ border: 1px solid #999999; background-color: #F6f6f6;}
+
+.cpx-oauthSelection-title {padding-left: 0px;}
+.cpx-oauthSelection-main { text-align: center; padding-bottom: 20px; }
+.cpx-oauthSelection-inner { border: 0px solid blue; text-align:center;max-width: 460px; margin:auto; padding-bottom:10px;}
+.cpx-oauthSelection-messageHtml { margin-left: 20px; height:15px; }
+.cpx-oauthSelection-item { border: 0px solid white; padding-bottom: 5px; padding-top: 5px; margin-left:20px;}
+.cpx-oauthSelection-item-icon { padding-top:10px; float: left; width: 100px; text-align: center; }
+.cpx-oauthSelection-item-icon img { border: 0px; }
+.cpx-oauthSelection-item-text { border: 0px solid red; margin-left: 100px; padding-right: 5px;}
+.cpx-oauthSelection-item-textTitle { text-align: left; line-height: 24px; border-bottom: 0px solid #CCCCCC; margin-bottom: 4px; }
+.cpx-oauthSelection-item-textTitle a { font-size: 17px; font-weight: normal; color: black; text-decoration: underline; cursor: pointer; }
+.cpx-oauthSelection-item-textDescription { text-align: left; line-height: 18px; }
+.cpx-oauthSelection-item-textDescription a { font-size: 13px; color: black; text-decoration: none; }
+.cpx-oauthSelection-item-textTitleFont { font-size: 15px; font-weight: bold; color: #222222; }
+.cpx-oauthSelection-item-textDescriptionFont {font-size: 11px; color: #222222;}
+.cpx-oauthSelection-item-text-noIcon { margin-left: 20px; }
+.cpx-oauthSelection-item-icon-noIcon { display: none; }
+.cpx-oauthSelection-buttons {padding: 0px 0 0 0;margin: 0;max-width: 460px;}
+.cpx-oauthSelection-buttons li{list-style: none;padding: 0 0 5px 0;margin: 0; }
+.cpx-oauthSelection-button a{background-color: white; min-width: 420px; min-height: 80px; display: block; border: 1px solid #C0C0C0; border-radius: 10px; text-decoration: none; }
+.cpx-oauthSelection-button a:hover{ border: 1px solid #999999; background-color: #F6f6f6;}
+
+.cpx-content-wait-shadow { display:none; position: absolute; top: 0%; left: 0%; width: 100%; min-width: 440px; height: 100%; min-height: 600px; background-color: black; z-index: 1001; -moz-opacity: 0.5; opacity: .50; filter: alpha(opacity=50); overflow: auto; }
+/*.cpx-content-wait       { display:none; width: 250px; height: 80px; background-color: white; border: 1px solid #333333; border-radius: 20px 20px 20px 20px; position: absolute; top: 200px; left: 30%; z-index: 1002; overflow: auto; } */
+.cpx-content-wait       { display:none; width: 250px; height: 80px; background-color: white; border: 1px solid #333333; border-radius: 20px 20px 20px 20px; position: absolute; top: 200px; left: 30%; z-index: 1002; overflow: auto; }
+.cpx-content-wait-title { font-size: 15px; font-weight: bold; padding-top: 30px; padding-left: 100px; text-align: left; }
+.cpx-content-wait-image { float: left; padding-left: 40px; padding-top: 20px; }
+
+.cpx-appstore-popup     { width: 250px; background-color: white; padding: 10px; position: absolute; top: 200px; left: 30%; z-index: 1002; overflow: auto; }
+.cpx-appstore-popup-close { text-align: right; padding-bottom: 4px; }
+.cpx-appstore-popup-button { margin-bottom: 5px; }
+.cpx-appstore-popup-button-image { width: 230px; }
+
+
+.cpx-credential-error { font-size: 14px; margin-bottom: 10px; margin-left: 20px; margin-right: 65px; background-color: #FFFFE6; padding-left: 10px; line-height: 24px; }
+.cpx-credential-main {text-align: left; }
+.cpx-credential-messageHtml {padding-bottom: 0px;}
+.cpx-credential-username { line-height: 40px; }
+.cpx-credential-username-label { float: left; padding-left: 40px; padding-right: 10px; font-size: 14px; min-width: 100px; text-align: right; }
+.cpx-credential-username-input { }
+.cpx-credential-password { line-height: 40px; padding-bottom: 10px; }
+.cpx-credential-password-label { float: left; padding-left: 40px; padding-right: 10px; font-size: 14px; min-width: 100px; text-align: right; }
+.cpx-credential-password-input { }
+.cpx-credential-continue { padding-bottom: 10px; }
+
+
+.cpx-wizard-expand-cell-header-link, .expand-cell-header-link a:link, .expand-cell-header-link a:visited { color: #FFFFFF; display: block; text-decoration: none; line-height: 24px; }
+.cpx-wizard-expand-cell-header { background-color: #006400; color: #FFFFFF; display: block; font-weight: bold; font-size: 16px; height: 30px; margin-bottom: 0; padding: 5px 10px 0; }
+.cpx-wizard-expand-cell {  }
+.cpx-wizard-expand-cell-container{ font-size: 14px; text-align: left; margin-left: 20px; margin-right: 20px; border: 1px solid #9A9AAA; margin-top: 5px; }
+.cpx-wizard-expand-cell-item { padding-top: 5px; }
+.cpx-wizard-expand-cell-inner { margin: 10px 20px 20px 20px; padding-top: 5px; }
+.cpx-wizard-expand-cell-item-top { padding-top: 5px; }
+.cpx-wizard-expand-cell-subitem { font-size: 13px; padding-left: 10px; padding-top: 8px;}
+.cpx-wizard-expand-cell-note { color: #333333; font-size: 13px; margin-left: -20px; padding-top: 8px; text-align: left; padding-left: 20px; line-height: 16px; }
+.cpx-wizard-expand-cell-subnote { color: #999999; font-size: 13px; margin-left: -20px; padding-top: 8px; text-align: left; padding-left: 20px; line-height: 16px; }
+.cpx-wizard-expand-cell-subnote a { color: #999999; }
+.cpx-wizard-expand-cell-header-collapsed { background-color: #006400; height: 25px; }
+.cpx-wizard-expand-cell-header-link-collapsed, .cpx-wizard-expand-cell-header-link-collapsed a:link, .cpx-wizard-expand-cell-header-link-collapsed a:visited { color: #ECECEC; font-size: 14px; line-height: 22px; }
+
+.cpx-wizard-download-link   { text-decoration: none;  }
+.cpx-wizard-download-image  { background-color: #AAAAAA; float: left; height: 60px; width: 60px; background-repeat: no-repeat; background-image: url('../images/download.png'); }
+.cpx-wizard-configure-image { background-color: #AAAAAA; float: left; height: 60px; width: 60px; background-repeat: no-repeat; background-image: url('../images/configure.png'); }
+.cpx-wizard-download-button { /*margin-top: 20px; */ margin-bottom: 10px; height: 54px; background-color: #006400; text-align: center; padding-top: 6px; }
+.cpx-wizard-download-title  { font-size: 15px; font-weight: bold; line-height: 24px; color: #FFFFFF; text-decoration: none; }
+.cpx-wizard-download-text   { font-size: 11px; font-weight: normal; color: #FFFFFF; text-decoration: none; }
+.cpx-wizard-download-step  { background-color: #AAAAAA; float: left; height: 60px; width: 60px; text-align: center; }
+.cpx-wizard-download-step-line1  { color: white; font-size: 16px; font-weight: normal; padding-top: 8px; line-height: 14px; }
+.cpx-wizard-download-step-line2  { color: white; font-size: 30px; font-weight: bold; }
+.cpx-wizard-download-spacer      { height: 10px; }
+.cpx-wizard-download-subnote          { color: #666666; font-size: 13px; margin-left: 0px; padding-top: 8px; padding-bottom: 8px; text-align: left; padding-left: 0px; padding-right: 0px; line-height: 18px; }
+.cpx-wizard-download-subnote a        { color: #333333; }
+.cpx-wizard-download-subnote ul       { padding-left: 30px; font-size: 12px; }
+.cpx-wizard-download-subnote-imageDiv { text-align: center; }
+.cpx-wizard-download-subnote-imageDiv img { border: 1px solid #333333; }
+.cpx-wizard-download-subnote-textDiv  { padding-left: 30px; }
+.cpx-wizard-download-subnote-passwordAlert    { color: #333333; background-color: #FFFFB0; padding-left: 10px; padding-right: 10px; border: 1px solid #A0A0A0; font-weight: bold; }
+.cpx-wizard-download-key               { font-size: 12px; float: left; width: 130px; font-weight: bold; text-align: right; padding-right: 5px; white-space: nowrap; }
+.cpx-wizard-download-value            { font-size: 12px; text-align: left; padding-left: 5px; }
+
+.cpx-hidden-submit { border: 0 none; height: 0; width: 0; padding: 0; margin: 0; overflow: hidden; }
+
+.cpx-pageAndroid-instruction1        { font-size: 14px; line-height: 22px; }
+.cpx-pageAndroid-instruction1-title  { font-size: 14px; color: black; }
+.cpx-pageAndroid-instruction1-form   { margin-left: 20px; margin-top: 15px; margin-bottom: 15px; }
+.cpx-pageAndroid-instruction1-button { margin-left: 10px; }
+.cpx-pageAndroid-instruction2        { font-size: 14px; line-height: 22px; }
+.cpx-pageAndroid-instruction2-title  { font-size: 14px; color: black; }
+.cpx-pageAndroid-instruction2-form   { margin-left: 20px; margin-top: 15px; margin-bottom: 15px; }
+
+.cpx-pageIphone-item { font: 15px/18px Arial,Helvetica,sans-serif; color: #000000; padding-bottom: 10px; padding-left: 20px; }
+.cpx-pageIphone-note { font: 12px/18px Arial,Helvetica,sans-serif; color: #666666; padding-bottom: 10px; padding-left: 40px; }
+.cpx-pageIphone-loading-inner { text-align: center; }
+
+.cpx-pageMac-title { margin-bottom: 5px; margin-left: 20px; margin-right: 20px; border-bottom: 1px solid #C9C7BF; padding-left: 0px; padding-bottom: 10px; }
+.cpx-pageMac-messageHtml { }
+.cpx-pageMac-item { font: 15px/18px Arial,Helvetica,sans-serif; color: #000000; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; }
+.cpx-pageMac-note { font: 12px/18px Arial,Helvetica,sans-serif; color: #666666; padding-bottom: 10px; padding-left: 40px; }
+
+.cpx-dataPrompt-field { line-height: 40px; padding-bottom: 10px; }
+.cpx-dataPrompt-label { float: left; padding-left: 40px; padding-right: 10px; font-size: 14px; min-width: 100px; text-align: right; }
+.cpx-dataPrompt-field-inputDiv { }
+.cpx-dataPrompt-messageHtml {padding-bottom: 0px; }
+.cpx-dataPrompt-error { font-size: 14px; margin-bottom: 0px; margin-left: 40px; }
+.cpx-dataPrompt-bottomTitle { padding-top: 15px; }
+
+.cpx-oob-error { font-size: 14px; margin-bottom: 10px; margin-left: 40px;}
+.cpx-oob-main {text-align: left; }
+.cpx-oob-messageHtml {padding-bottom: 0px; min-height: 120px; }
+.cpx-oob-email { padding-bottom: 20px; }
+.cpx-oob-email-radio { float: left; }
+.cpx-oob-email-label { float: left; padding-top: 2px; padding-left: 10px; padding-right: 10px; font-size: 14px;  }
+.cpx-oob-email-input { float: left; }
+.cpx-oob-sms { padding-bottom: 20px; }
+.cpx-oob-sms-radio { float: left; }
+.cpx-oob-sms-label { padding-top: 2px; padding-left: 10px; padding-right: 10px; font-size: 14px;  }
+.cpx-oob-sms-input { margin-left: 40px; margin-top: 10px; }
+.cpx-oob-sms-disclaimer { font-size: 9px; padding-left: 130px; padding-top: 10px; }
+.cpx-oob-sms { padding-bottom: 20px; }
+.cpx-oob-code-radio { float: left; }
+.cpx-oob-code-label { float: left; padding-top: 2px; padding-left: 10px; padding-right: 10px; font-size: 14px;  }
+.cpx-oob-code-input { float: left; }
+.cpx-oob-entry       { margin-top: 20px; margin-bottom: 20px; }
+.cpx-oob-label       { float: left; min-width: 100px; text-align:right; padding-right: 10px; font-size: 14px; }
+.cpx-oob-messageHtml {min-height: 80px; }
+
+.cpx-oob-sms-countryCodeDiv { margin-top: 10px; margin-left: 40px; }
+.cpx-oob-sms-countryCode-labelDiv { min-width: 90px; float: left; text-align: right; margin-right: 10px; }
+.cpx-oob-sms-countryCode-inputDiv {}
+.cpx-oob-sms-countryCode { font-size: 10px; width: 120px; }
+
+.cpx-oob-sms-phoneDiv {  margin-top: 10px; margin-left: 40px;  }
+.cpx-oob-sms-phone { width: 120px; }
+.cpx-oob-sms-phone-labelDiv { min-width: 90px; float: left; text-align: right; margin-right: 10px; }
+.cpx-oob-sms-phone-inputDiv {}
+
+.cpx-oob-sms-providerDiv {  margin-top: 10px; margin-left: 40px;  }
+.cpx-oob-sms-provider { font-size: 10px; width: 120px;  }
+.cpx-oob-sms-provider-labelDiv { min-width: 90px; float: left; text-align: right; margin-right: 10px; }
+.cpx-oob-sms-provider-inputDiv {}
+
+
+.cpx-concurrentDevice-error { font-size: 14px; margin-bottom: 10px; margin-left: 40px;}
+.cpx-concurrentDevice-main {text-align: left; }
+.cpx-concurrentDevice-messageHtml {padding-bottom: 0px;}
+.cpx-concurrentDevice-continue { padding-bottom: 10px; }
+.cpx-concurrentDevice-helplink { float: left; margin-left: 40px; font-size: 12px;  }
+.cpx-concurrentDevice-helplink a { color: #0000EE; }
+.cpx-concurrentDevice-helplink a:visited { color: #0000EE; }
+.cpx-concurrentDevice-helplink a:hover { color: #0000EE; }
+
+/* NOTE:  Due to the way the list lays out for concurrent devices, many of the standard margin-left values are overridden to align with the list. */
+.cpx-concurrentDevicePrompt-button { font-size: 11px; border: 0px; padding-top: 5px; padding-bottom: 5px; display: block; width: 65px; color: white; text-align: center; text-decoration: none; float: left; }
+.cpx-concurrentDevicePrompt-button-keep { background-color: green; border-top-left-radius: 10px; border-bottom-left-radius: 10px; font-weight: bold; }
+.cpx-concurrentDevicePrompt-button-remove { background-color: #CD0000; border-top-right-radius: 10px; border-bottom-right-radius: 10px; font-weight: bold; }
+.cpx-concurrentDevicePrompt-button-keep-unselected { color: #435E3A; background-color: white; border:1px solid #435E3A; font-size: 9px; font-weight: normal; border-right: 0px; }
+.cpx-concurrentDevicePrompt-button-remove-unselected { color: #660000; background-color: white; border:1px solid #660000; font-size: 9px; font-weight: normal; border-left: 0px; }
+.cpx-concurrentDevicePrompt-item-button { float: left; width: 134px; margin-right: 20px; margin-left: 10px; }
+.cpx-concurrentDevicePrompt-item { margin-left: 40px;  margin-right: 40px; margin-bottom: 10px; padding-top: 10px; border-top: 1px solid grey; }
+.cpx-concurrentDevicePrompt-item-text { margin-left: 140px; font-size: 12px; line-height: 16px;  padding-top: 3px; }
+.cpx-concurrentDevicePrompt-item-textTitle { font-size: 11px; padding-right: 10px; }
+.cpx-concurrentDevicePrompt-item-textDescription { font-size: 11px; color: #666666; margin-left: 40px; }
+.cpx-concurrentDevicePrompt-continue {padding-bottom: 10px; }
+.cpx-concurrentDevicePrompt-messageHtml { padding-bottom: 0px; margin-right: 40px; }
+.cpx-concurrentDevicePrompt-helplink { margin-top: 0px; padding-bottom: 20px; }
+
+.cpx-wizard-manual-button { border: 1px solid #9A9AAA; padding: 5px 10px; text-decoration: none; cursor: pointer; }
+.cpx-wizard-manual-button:hover { background-color: #D0D0D0; }
+
+.cpx-button { border: 1px solid black; color: black; cursor: pointer; font: 10px Arial, sans-serif; height: 20px; padding: 3px 10px; text-decoration: none; }
+
+.cpx-template-headerTopbar { display: none; height: 34px; background-color: #006400; width: 100%; }
+.cpx-template-headerRibbon { display: none; height: 160px; background-color: #006400; width: 100%; }
+
+.cpx-template-headerWarningTopbar { display: none; background-color: yellow; width: 100%; color: black; padding-top: 5px; padding-bottom: 5px; padding-left: 20px; font-size: 12px; text-align: left; }
+
+.cpx-wizard-subsection          { border: 1px solid #A0A0A0; margin-top: 15px; }
+.cpx-wizard-subsection-title    { padding-left: 10px; background-color: #D6D6D6; height: 24px; margin-bottom: 6px; line-height: 24px; }
+.cpx-wizard-subsection-text     { font-size: 13px; line-height: 18px; padding-left: 10px; }
+.cpx-wizard-subsection-error    { font-size: 11px; line-height: 18px; color: #333333; padding-left: 10px; padding-right: 10px; padding-bottom: 6px; }
+.cpx-wizard-subsection-button   { margin-top: 15px; margin-bottom: 15px; margin-left: 20px; }
+
+/** Browser-specific divs start off hidden and only are displayed (by javascript) if the browser matches. */
+.cpn-safariOnly   { display: none; }
+.cpn-ieOnly       { display: none; }
+.cpn-chromeOnly   { display: none; }
+.cpn-firefoxOnly  { display: none; }
+.cpn-otherOnly    { display: none; }
+
+.cpx-wizard-ios-warningImage { text-align: center; }
+.cpx-wizard-ios-warningText  { margin-top: 10px; background-color: #FFFFE6; font-size: 13px; padding: 10px; line-height: 18px; }
+
+.cpx-otp-error { font-size: 14px; margin-bottom: 10px; margin-left: 20px; margin-right: 65px; background-color: #FFFFE6; padding-left: 10px; line-height: 24px; }
+.cpx-ss-error { font-size: 14px; margin-bottom: 10px; margin-left: 20px; margin-right: 65px; background-color: #FFFFE6; padding-left: 10px; line-height: 24px; }
+.cpx-otp-otp-field { width: 130px; border: 1px solid #A0A0A0;  }
+.cpx-ss-ss-field { width: 130px; border: 1px solid #A0A0A0; }
+.cpx-credential-username-field { width: 200px; border: 1px solid #A0A0A0; }
+.cpx-credential-password-field { width: 200px; border: 1px solid #A0A0A0; }
+.cpx-dataPrompt-field-input { width: 200px; border: 1px solid #A0A0A0; }
+.cpx-oob-email-field { width: 200px; border: 1px solid #A0A0A0;  }
+.cpx-oob-sms-phone { width: 200px; border: 1px solid #A0A0A0;  }
+.cpx-oob-code-field { width: 50px; border: 1px solid #A0A0A0;  }
+.cpx-oob-otp-field { width: 130px; border: 1px solid #A0A0A0;  }
+
+/* iPhone pre-5 */
+@media (device-height : 480px)      { body { min-height: 480px; } }
+/* iPhone 5 */
+@media (device-height : 568px)      { body { min-height: 568px; } }
+
+
+/**
+The items below are version-dependent and will be overridden when necessary.
+back-button needs to be hidden on versions before 3.0.2000.       **/
+#back-button { display: none; }
+
+.cpx-pageChromeOsExtensionDone-title { font-size: 16px; line-height: 50px; }
+.cpx-pageChromeOsExtensionDone-image { width: 50px; padding-right: 10px; float: left; }
+.cpx-pageChromeOsExtensionDone-note { padding-top: 20px; padding-right: 20px; }
+
+.cpx-accessRequest-messageHtml      { min-height: 80px; padding-bottom: 4px; }
+.cpx-accessRequest-field            { margin-bottom: 8px; }
+.cpx-accessRequest-label            { float: left; min-width: 100px; text-align:right; padding-right: 10px; font-size: 13px; }
+.cpx-accessRequest-promptText       { padding-bottom: 4px; }
+.cpx-accessRequest-field-input      { font-size: 12px; }
+.cpx-accessRequest-field-area       { width: 266px; font-size: 12px; }
+.cpx-accessRequest-smsCountryCode   { width: 266px; font-size: 12px; margin-bottom: 8px; }
+.cpx-accessRequest-error            { padding-top: 0px; padding-bottom: 10px; }
+
+.cpx-wizard-download-subtext { font-size: 13px; color: #666666; }
+
+.cpx-wizard-download-footer { font-size: 12px; color: #666666; padding-left: 25px; padding-bottom: 10px; }
+.cpx-wizard-download-footer a { color: #666666; }
+.cpx-wizard-download-line { margin-top: 32px; margin-bottom: 16px; }
+
+.cpx-req-wait-icon-div { float: left; padding-right: 10px; }
+.cpx-req-messageHtml { padding-bottom: 0px; min-height: 100px; }
+.cpx-req-entry { padding-top: 10px; }
+.cpx-req-entry-rejected { display: none; }
+.cpx-req-entry-success { display: none; }
+
+.cpx-credential-captchaImage { margin-left: 150px; }
+
+.cpx-credential-captchaInstructions { padding-left: 150px; color: #666666; font-size: 11px; max-width: 200px; padding-top: 6px; }
+.cpx-credential-captchaInstructions-label { float: left; padding-left: 40px; padding-right: 10px; font-size: 14px; min-width: 100px; text-align: right; }
+.cpx-credential-captchaInstructions-input { }
+
+.cpx-credential-captcha { line-height: 40px; padding-bottom: 10px;  }
+.cpx-credential-captcha-label { float: left; padding-left: 40px; padding-right: 10px; font-size: 14px; min-width: 100px; text-align: right; }
+.cpx-credential-captcha-input { }
+
+.cpx-aup-error { font-size: 14px; margin-bottom: 10px; margin-left: 20px; margin-right: 65px; background-color: #FFFFE6; padding-left: 10px; line-height: 24px; }
+.cpx-message-error { font-size: 14px; margin-bottom: 10px; margin-left: 20px; margin-right: 65px; background-color: #FFFFE6; padding-left: 10px; line-height: 24px; }
+
+/*  TEMPLATE RUCKUS_1 CSS OVERRIDES */
+
+body { margin: 0px; margin-bottom: 50px; background: url("../images/background.png") repeat scroll 0 0 #FFFFFF; }
+
+.cpx-template-topbar { background-color: #FFFFFF;  }
+.cpx-template-topbar-image { width: 213px; height: 118px; }
+.cpx-template-workarea { width: 440px; margin-top: -147px; min-width: 440px; }
+
+.cpx-template-topbar-caption { display:none;  /*width: 227px; height: 0px; text-align: center;*/ }
+/* .cpx-template-topbar-caption-line1 { font-size: 15px; color: #FFFFFF; }
+.cpx-template-topbar-caption-line2 { font-size: 15px; color: #FFFFFF; } */
+
+.cpx-template-topbar-image { margin-top: 0px; padding-left: 0px; padding-right: 0px; }
+.cpx-template-topbar-image-img { width: 440px; height: 119px; }
+.cpx-template-mainbox { border-radius: 0px; }
+.cpx-template-line { display: none; }
+.cpx-template-startover { margin-top: -2px; font-size: 13px; padding-bottom: 10px; }
+.cpx-template-tagline { font-size: 11px; padding-bottom: 12px; margin-right: 10px; }
+.cpx-template-tagline a { font-size: 11px; padding-bottom: 10px; }
+.cpx-dataPrompt-label { padding-left: 20px; padding-right: 10px; }
+.cpx-dataPrompt-field input { width: 240px; }
+.cpx-dataPrompt-title { padding-top: 20px; }
+.cpx-content-messageHtml { margin-left: 20px; } 
+.cpx-oob-code-field { width: 80px; }
+.cpx-oob-sms-providerDiv { display: none; }
+
+.cpx-oob-sms-label { padding-left: 30px; }
+.cpx-selectionPrompt-button a { min-height: 115px; }
+.cpx-wizard-expand-cell-inner ol { padding-left: 0px; font-size: 12px; }
+/* .cpx-wizard-expand-cell-inner ul { padding-left: 0px; font-size: 12px; } */
+.cpx-wizard-expand-cell-note { font-size: 11px; }
+.cpx-wizard-expand-cell-subnote { font-size: 11px; }
+.cpx-wizard-manual-button { background-color: #F0F0F0; border-radius: 4px; color: #666666; }
+.cpx-content-line { margin-top: 20px; }
+.cpx-aup-messageHtml { margin-left: 50px; }
+.cpx-concurrentDevicePrompt-item { margin-left: 10px; margin-right: 10px; }
+
+.cpx-template-headerTopbar { display: block; }
+.cpx-template-headerRibbon { display: block; min-width: 440px; }
+
+#back-button { display: block; }
+
+.ocultar { display: none;}
+
+.alert-success {color: red;}
+
+.alerta-correcto {color: blue;}

@@ -1,0 +1,18 @@
+AppBundle\Entity\Maestro:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\MaestroRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        usuario:
+            type: string
+            length: '50'
+        mac:
+            type: string
+            length: '17'
+    lifecycleCallbacks: {  }

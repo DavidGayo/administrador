@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- X-UA-Compatible Must Be First. -->
+        <META HTTP-EQUIV='X-UA-Compatible' content='IE=EDGE; IE=9; IE=8; IE=7;' />
+        <META HTTP-EQUIV='Content-Type' content='text/html; charset=utf-8' />
+        <!-- ViewPort controls the display on Apple iPhone. -->
+        <META NAME="viewport" CONTENT="width=device-width"/>
+        <!-- Make sure this page is never cached. -->
+        <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+        <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+        <title>{% block title %}Portal UIC{% endblock %}</title>
+
+        <link type="text/css" rel="stylesheet" href="{{ asset('public/css/wizard.css') }}">
+
+        <script src="{{ asset('public/js/wizard_plugindetect.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('public/js/wizard_os.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('public/js/wizard.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('public/js/esapi-compressed.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('public/js/Base.esapi.properties.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('public/js/ESAPI_Standard_en_US.properties.js') }}" type="text/javascript"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+
+
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body name='main'>
+        {# <div id='cpx-pageinfo'
+        cpxPluginStep='1'
+        cpxPluginGuid='WorkflowPlugin-814B165B-D4C3-46F0-AE88-E5CF8E93ABA7'
+        cpxPluginType='aup'
+        ></div> #}
+        {# <div id='cpx-header-warningTopbar' class='cpx-template-headerWarningTopbar'></div> #}
+
+        <div id='cpx-header-ribbon' class='cpx-template-headerRibbon'>
+            <div id='cpx-header-topbar' class='cpx-template-headerTopbar'></div>
+        </div>
+
+        <div class='cpx-template-workarea'>
+            <div class='cpx-template-mainbox'>
+                <div class='cpx-template-topbar'>
+                    <div class='cpx-template-topbar-image'>
+                        <img id='cpx-template-topbar-image' class='cpx-template-topbar-image-img' src="{{asset('public/img/banner.png') }}" alt='UIC - Universidad Intercontinental uses Cloudpath ES by Ruckus Networks to automate WPA2 across a wide variety of BYOD device types.'>
+                    </div>
+                </div>
+
+                {% block body %}{% endblock %}
+                    
+                <div id='cpx-template-footer' class='cpx-template-footer' cpxAssistanceId='1AD6'>
+                    <h3><a href="http://warriorslabs.com">WarriorsLabs</a></h3>
+                </div>
+            </div>
+        </div>
+        {% block javascripts %}
+        {% endblock %}
+    </body>
+</html>

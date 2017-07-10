@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	{% for flashMessage in app.session.flashbag.get('mensaje') %}
+		<spam class="alert-success">{{ flashMessage }}</spam>
+	{% endfor %}
+	<form action="{{ path('registro')}}?{{url}}" method="POST">
+
+		<div class='cpx-content-main cpx-credential-main'>
+		  	<div id='cpx-title' class='cpx-content-title cpx-credential-title'>
+		  		
+		    
+		  	</div>
+		  	<div id='cpx-messageHtml' class='cpx-content-messageHtml cpx-credential-messageHtml'>
+		    	<center>
+				<b>Tu usuario y contraseña son requeridos para el acceso a la red.</b>
+
+				<hr>
+				¿No sabes cuales son tus credenciales u olvidaste la contraseña?<br>
+				Manda un correo a "serviciosweb@uic.edu.mx" 
+				<hr>
+		  	</div>
+		  	<div id='error' class='cpx-error cpx-content-error cpx-credential-error'>
+		    
+		  	</div>
+
+		  	<div class='cpx-credential-username'>
+		    	<div id='cpx-fieldLabel-username' class='cpx-credential-username-label'>Usuario de correo:</div>
+		    	<div class='cpx-credential-username-input'>
+		      		<input class='cpx-credential-username-field' type='text' id='username' name='username' value='' autocorrect='off' autocapitalize='off' size=24 required onkeypress="return soloLetras(event)"/>
+		    	</div>
+		  	</div>
+		  	<div class='cpx-credential-password'>
+		    	<div  id='cpx-fieldLabel-password' class='cpx-credential-password-label'>Contraseña:</div>
+		    	<div class='cpx-credential-password-input'>
+		      		<input class='cpx-credential-password-field' type='password' id='password' name='password' value='' autocorrect='off' autocapitalize='off' autocomplete='off' size=24 required/>
+		    	</div>
+		  	</div>
+		  
+
+		  	<div id='cpx-credential-helplink' class='cpx-helplink cpx-credential-helplink'>
+		    
+		  	</div>
+		  	<div class='cpx-content-line cpx-credential-line'></div>
+
+			  <div class='cpx-content-buttonBar cpx-credential-buttonBar'>
+			    <div id='back-div' class='cpx-back cpx-credential-back '>
+			      
+			        <a id="back-button" href="{{ path('homepage')}}">&lt; Back</a>
+			      
+			    </div>
+			    <div id='continue-div' class='cpx-continue cpx-credential-continue'>
+			      <button id="continue-button" type="submit">Continuar ></button>
+			    </div>
+			  </div>
+
+		  <div style='clear:both;'></div>
+		  <div class="cpx-hidden-submit"><input type="submit" tabindex="-1"/></div>
+
+		</div>
+	</form>
+
+{% endblock %}
+{% block javascripts %}
+	<script>
+
+		function soloLetras(e){
+	       key = e.keyCode || e.which;
+	       tecla = String.fromCharCode(key).toLowerCase();
+	       letras = " abcdefghijklmnñopqrstuvwxyz1234567890.-_";
+	       especiales = "8-37-39-46";
+
+	       tecla_especial = false
+	       for(var i in especiales){
+	            if(key == especiales[i]){
+	                tecla_especial = true;
+	                break;
+	            }
+	        }
+
+	        if(letras.indexOf(tecla)==-1 && !tecla_especial){
+	            return false;
+	        }
+	    }
+	</script>
+{% endblock %}
